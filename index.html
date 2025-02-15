@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои сделки - Т-Банк</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Мои сделки</h1>
+        <div class="controls">
+            <button onclick="loadTrades()">Обновить данные</button>
+            <div id="loading" class="loading hidden">Загрузка...</div>
+        </div>
+        <div id="error" class="error hidden"></div>
+        <table id="trades-table">
+            <thead>
+                <tr>
+                    <th>Дата</th>
+                    <th>Тип</th>
+                    <th>Актив</th>
+                    <th>Количество</th>
+                    <th>Цена</th>
+                    <th>Сумма</th>
+                </tr>
+            </thead>
+            <tbody id="trades-body">
+                <!-- Данные будут вставлены здесь -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
