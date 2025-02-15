@@ -1,5 +1,5 @@
 const API_URL = 'https://api.tbank.ru/brokerage/trades'; // Замените на реальный URL API
-const API_TOKEN = 'your_api_token_here'; // Замените на реальный токен
+const API_TOKEN = 'Bearer TBankSandboxToken'; // Замените на реальный токен
 
 async function fetchTrades() {
     try {
@@ -44,11 +44,11 @@ function displayTrades(trades) {
 async function loadTrades() {
     const loading = document.getElementById('loading');
     const errorElement = document.getElementById('error');
-    
+
     try {
         loading.classList.remove('hidden');
         errorElement.classList.add('hidden');
-        
+
         const data = await fetchTrades();
         displayTrades(data.trades);
     } catch (error) {
